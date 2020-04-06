@@ -141,7 +141,7 @@ class GisaidCoVScrapper:
     def _download_row(self, parent_form, row_id):
         row = parent_form.find_elements_by_tag_name("tr")[row_id]
         col = row.find_elements_by_tag_name("td")[1]
-        name = row.find_elements_by_tag_name("td")[2].text
+        name = row.find_elements_by_tag_name("td")[3].text
         if name in self.already_downloaded:
             return
 
